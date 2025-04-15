@@ -29,13 +29,20 @@ def main():
         # if key_lst[pg.K_RIGHT]:
         #     kk_rct.move_ip(+1,0)
         if key_lst[pg.K_UP]:
-            kk_rct.move_ip(-1,-1)
-        if key_lst[pg.K_DOWN]:
-            kk_rct.move_ip(-1,+1)
-        if key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip(+1,0)
+            high=-1
+            wide=-1
+        elif key_lst[pg.K_DOWN]:
+            high=1
+            wide=-1
+        elif key_lst[pg.K_RIGHT]:
+            high=0
+            wide=1
         else:
-            kk_rct.move_ip(-1,0)
+            high=0
+            wide=-1
+        kk_rct.move_ip(wide,high)
+
+        
 
 
 
